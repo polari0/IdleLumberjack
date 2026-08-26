@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://tp57bmos6k62"]
+
+[ext_resource type="Texture2D" uid="uid://d1miasi2tlrg0" path="res://icon.svg" id="1_3mqji"]
+[ext_resource type="PackedScene" uid="uid://dn7md1nf2vh55" path="res://Assets/Scenes/StatUpdrageButton.tscn" id="2_x4av3"]
+[ext_resource type="PackedScene" uid="uid://cdxn1faire68s" path="res://Assets/Scenes/cheat_menu.tscn" id="3_rpqi1"]
+
+[node name="Node2D" type="Control" unique_id=678653765]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -720.0
+offset_bottom = -1280.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1386769556]
+anchor_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1012324316]
+position = Vector2(303, 457)
+texture = ExtResource("1_3mqji")
+
+[node name="AspectRatioContainer" type="Control" parent="." unique_id=1983448826]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_right = 720.0
+offset_bottom = 1280.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="AspectRatioContainer" unique_id=1494125892]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AspectRatioContainer/Panel" unique_id=1695985571]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="AspectRatioContainer/Panel/HBoxContainer" unique_id=119556109]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="UpgradeButton" parent="AspectRatioContainer/Panel/HBoxContainer" unique_id=1651956108 instance=ExtResource("2_x4av3")]
+layout_mode = 2
+
+[node name="CheatMenu" parent="." unique_id=101566279 node_paths=PackedStringArray("cheatButtons") instance=ExtResource("3_rpqi1")]
+layout_mode = 1
+offset_right = 200.0
+offset_bottom = 307.0
+cheatButtons = {
+"CreateDB": NodePath("ScrollContainer/VBoxContainer/Button"),
+"InfiniteGems": NodePath("ScrollContainer/VBoxContainer/Button5"),
+"InfiniteMoney": NodePath("ScrollContainer/VBoxContainer/Button4"),
+"InfinitePlanks": NodePath("ScrollContainer/VBoxContainer/Button3"),
+"InfiniteWood": NodePath("ScrollContainer/VBoxContainer/Button2")
+}

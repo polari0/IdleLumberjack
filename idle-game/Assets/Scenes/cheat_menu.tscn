@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://cdxn1faire68s"]
+
+[ext_resource type="Script" uid="uid://bqvo80fi6vcs0" path="res://Assets/scripts/DevelopmentHelp/CheatMenu.cs" id="1_gkndj"]
+
+[node name="CheatMenu" type="Control" unique_id=101566279 node_paths=PackedStringArray("cheatButtons")]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -380.0
+offset_bottom = -714.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_gkndj")
+cheatButtons = {
+"CreateDB": NodePath("ScrollContainer/VBoxContainer/Button"),
+"InfiniteGems": NodePath("ScrollContainer/VBoxContainer/Button5"),
+"InfiniteMoney": NodePath("ScrollContainer/VBoxContainer/Button4"),
+"InfinitePlanks": NodePath("ScrollContainer/VBoxContainer/Button3"),
+"InfiniteWood": NodePath("ScrollContainer/VBoxContainer/Button2")
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1720283024]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=1703439090]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1824719133]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+text = "CreateDB
+"
+
+[node name="Button2" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1095599468]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Give Infinite Resources"
+
+[node name="Button3" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1839176909]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Give Infinite Planks"
+
+[node name="Button4" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=224063820]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Give Infinite Money
+"
+
+[node name="Button5" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1379787318]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Give Infinite gems?
+"
+
+[node name="Button6" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1713524875]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Fill resource x
+"
+
+[node name="Button7" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1386944373]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Fill Resource y"
+
+[node name="Button8" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=868253309]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Fill resouce z"
+
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Button" to="." method="On_CreateDB"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Button2" to="." method="On_InfiniteWood_Pressed"]
