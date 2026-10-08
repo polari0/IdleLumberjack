@@ -1,0 +1,287 @@
+[gd_scene format=3 uid="uid://c2fsolor3eyqg"]
+
+[ext_resource type="Script" uid="uid://yuqg1n603v5d" path="res://Assets/scripts/Menus/GameMeny.cs" id="1_xmrfr"]
+[ext_resource type="Script" uid="uid://darrtkr2fctd" path="res://Assets/scripts/CustomObjects/MenuButton.cs" id="2_xwluh"]
+
+[node name="GameMenu" type="Control" unique_id=1939085568 node_paths=PackedStringArray("MenuButtons")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xmrfr")
+MenuButtons = [NodePath("PanelContainer/VBoxContainer/GridContainer"), NodePath("PanelContainer/VBoxContainer/HBoxContainer"), NodePath("PanelContainer/VBoxContainer/HBoxContainer2")]
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1068814107]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1211232667]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/VBoxContainer" unique_id=444206679]
+custom_maximum_size = Vector2(-1, 700)
+layout_mode = 2
+size_flags_vertical = 3
+columns = 4
+
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=2121914254]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+metadata/ButtonName = ""
+
+[node name="Button2" type="Button" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=473903575]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+ButtonName = "UpgradeMenu"
+metadata/ButtonName = ""
+
+[node name="Button3" type="Button" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=377643708]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+ButtonName = "UpgradeMenu"
+metadata/ButtonName = ""
+
+[node name="Button4" type="Button" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=706300516]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+ButtonName = "UpgradeMenu"
+metadata/ButtonName = ""
+
+[node name="Button5" type="Button" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=1112286650]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+ButtonName = "UpgradeMenu"
+metadata/ButtonName = ""
+
+[node name="Button6" type="Button" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=1042199577]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+ButtonName = "UpgradeMenu"
+metadata/ButtonName = ""
+
+[node name="Button7" type="Button" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=715260716]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+ButtonName = "UpgradeMenu"
+metadata/ButtonName = ""
+
+[node name="Button8" type="Button" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=1163292242]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+ButtonName = "UpgradeMenu"
+metadata/ButtonName = ""
+
+[node name="Button9" type="Button" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=1220989153]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+ButtonName = "UpgradeMenu"
+metadata/ButtonName = ""
+
+[node name="Button10" type="Button" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=106050782]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+ButtonName = "UpgradeMenu"
+metadata/ButtonName = ""
+
+[node name="Button11" type="Button" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=926308689]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+ButtonName = "UpgradeMenu"
+metadata/ButtonName = ""
+
+[node name="Button12" type="Button" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=561190290]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+ButtonName = "UpgradeMenu"
+metadata/ButtonName = ""
+
+[node name="Button13" type="Button" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=1416865938]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+ButtonName = "UpgradeMenu"
+metadata/ButtonName = ""
+
+[node name="Button14" type="Button" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=1466673646]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+ButtonName = "UpgradeMenu"
+metadata/ButtonName = ""
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1724099401]
+custom_maximum_size = Vector2(-1, 50)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Current"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=1936236064]
+custom_maximum_size = Vector2(-1, 100)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button1" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=2143851907]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+ButtonName = "UpgradeMenu"
+metadata/ButtonName = ""
+
+[node name="Button2" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=1774106997]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+ButtonName = "UpgradeMenu"
+metadata/ButtonName = ""
+
+[node name="Butto3" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=2123689163]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+ButtonName = "UpgradeMenu"
+metadata/ButtonName = ""
+
+[node name="Button4" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=1243164509]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+ButtonName = "UpgradeMenu"
+metadata/ButtonName = ""
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1819655978]
+custom_maximum_size = Vector2(-1, 50)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Current"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=1062850602]
+custom_maximum_size = Vector2(-1, 100)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button1" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer2" unique_id=8223557]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+ButtonName = "UpgradeMenu"
+metadata/ButtonName = ""
+
+[node name="Button2" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer2" unique_id=1267167479]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+ButtonName = "UpgradeMenu"
+metadata/ButtonName = ""
+
+[node name="Butto3" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer2" unique_id=121618929]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+ButtonName = "UpgradeMenu"
+metadata/ButtonName = ""
+
+[node name="Button4" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer2" unique_id=213962433]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+ButtonName = "UpgradeMenu"
+metadata/ButtonName = ""
+
+[node name="Button1" type="Button" parent="." unique_id=168445993]
+layout_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+ButtonName = "UpgradeMenu"
+metadata/ButtonName = ""
+
+[node name="Button2" type="Button" parent="." unique_id=1563612597]
+layout_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+ButtonName = "UpgradeMenu"
+metadata/ButtonName = ""
+
+[node name="Butto3" type="Button" parent="." unique_id=736620803]
+layout_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+ButtonName = "UpgradeMenu"
+metadata/ButtonName = ""
+
+[node name="Button4" type="Button" parent="." unique_id=437349945]
+layout_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xwluh")
+ButtonName = "UpgradeMenu"
+metadata/ButtonName = ""
+
+[connection signal="gui_input" from="PanelContainer/VBoxContainer/GridContainer/Button" to="PanelContainer/VBoxContainer/GridContainer/Button" method="OnguiInput"]
+[connection signal="gui_input" from="PanelContainer/VBoxContainer/GridContainer/Button2" to="PanelContainer/VBoxContainer/GridContainer/Button2" method="OnguiInput"]
+[connection signal="gui_input" from="PanelContainer/VBoxContainer/GridContainer/Button3" to="PanelContainer/VBoxContainer/GridContainer/Button3" method="OnguiInput"]
+[connection signal="gui_input" from="PanelContainer/VBoxContainer/GridContainer/Button4" to="PanelContainer/VBoxContainer/GridContainer/Button4" method="OnguiInput"]
+[connection signal="gui_input" from="PanelContainer/VBoxContainer/GridContainer/Button5" to="PanelContainer/VBoxContainer/GridContainer/Button5" method="OnguiInput"]
+[connection signal="gui_input" from="PanelContainer/VBoxContainer/GridContainer/Button6" to="PanelContainer/VBoxContainer/GridContainer/Button6" method="OnguiInput"]
+[connection signal="gui_input" from="PanelContainer/VBoxContainer/GridContainer/Button7" to="PanelContainer/VBoxContainer/GridContainer/Button7" method="OnguiInput"]
+[connection signal="gui_input" from="PanelContainer/VBoxContainer/GridContainer/Button8" to="PanelContainer/VBoxContainer/GridContainer/Button8" method="OnguiInput"]
+[connection signal="gui_input" from="PanelContainer/VBoxContainer/GridContainer/Button9" to="PanelContainer/VBoxContainer/GridContainer/Button9" method="OnguiInput"]
+[connection signal="gui_input" from="PanelContainer/VBoxContainer/GridContainer/Button10" to="PanelContainer/VBoxContainer/GridContainer/Button10" method="OnguiInput"]
+[connection signal="gui_input" from="PanelContainer/VBoxContainer/GridContainer/Button11" to="PanelContainer/VBoxContainer/GridContainer/Button11" method="OnguiInput"]
+[connection signal="gui_input" from="PanelContainer/VBoxContainer/GridContainer/Button12" to="PanelContainer/VBoxContainer/GridContainer/Button12" method="OnguiInput"]
+[connection signal="gui_input" from="PanelContainer/VBoxContainer/GridContainer/Button13" to="PanelContainer/VBoxContainer/GridContainer/Button13" method="OnguiInput"]
+[connection signal="gui_input" from="PanelContainer/VBoxContainer/GridContainer/Button14" to="PanelContainer/VBoxContainer/GridContainer/Button14" method="OnguiInput"]
+[connection signal="gui_input" from="PanelContainer/VBoxContainer/HBoxContainer/Button1" to="PanelContainer/VBoxContainer/HBoxContainer/Button1" method="OnguiInput"]
+[connection signal="gui_input" from="PanelContainer/VBoxContainer/HBoxContainer/Button2" to="PanelContainer/VBoxContainer/HBoxContainer/Button2" method="OnguiInput"]
+[connection signal="gui_input" from="PanelContainer/VBoxContainer/HBoxContainer/Butto3" to="PanelContainer/VBoxContainer/HBoxContainer/Butto3" method="OnguiInput"]
+[connection signal="gui_input" from="PanelContainer/VBoxContainer/HBoxContainer/Button4" to="PanelContainer/VBoxContainer/HBoxContainer/Button4" method="OnguiInput"]
+[connection signal="gui_input" from="PanelContainer/VBoxContainer/HBoxContainer2/Button1" to="PanelContainer/VBoxContainer/HBoxContainer2/Button1" method="OnguiInput"]
+[connection signal="gui_input" from="PanelContainer/VBoxContainer/HBoxContainer2/Button2" to="PanelContainer/VBoxContainer/HBoxContainer2/Button2" method="OnguiInput"]
+[connection signal="gui_input" from="PanelContainer/VBoxContainer/HBoxContainer2/Butto3" to="PanelContainer/VBoxContainer/HBoxContainer2/Butto3" method="OnguiInput"]
+[connection signal="gui_input" from="PanelContainer/VBoxContainer/HBoxContainer2/Button4" to="PanelContainer/VBoxContainer/HBoxContainer2/Button4" method="OnguiInput"]
+[connection signal="gui_input" from="Button1" to="Button1" method="OnguiInput"]
+[connection signal="gui_input" from="Button2" to="Button2" method="OnguiInput"]
+[connection signal="gui_input" from="Butto3" to="Butto3" method="OnguiInput"]
+[connection signal="gui_input" from="Button4" to="Button4" method="OnguiInput"]

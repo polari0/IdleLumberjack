@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://tp57bmos6k62"]
 
-[ext_resource type="Texture2D" uid="uid://d1miasi2tlrg0" path="res://icon.svg" id="1_3mqji"]
-[ext_resource type="PackedScene" uid="uid://dn7md1nf2vh55" path="res://Assets/Scenes/StatUpdrageButton.tscn" id="2_x4av3"]
+[ext_resource type="Script" uid="uid://dyxg3srthf8xe" path="res://Assets/scripts/Globals/GameManager.cs" id="1_rpqi1"]
+[ext_resource type="PackedScene" uid="uid://c2fsolor3eyqg" path="res://Assets/Scenes/game_menu.tscn" id="2_uxrcv"]
 [ext_resource type="PackedScene" uid="uid://cdxn1faire68s" path="res://Assets/Scenes/cheat_menu.tscn" id="3_rpqi1"]
 
-[node name="Node2D" type="Control" unique_id=678653765]
+[node name="Node2D" type="Control" unique_id=678653765 node_paths=PackedStringArray("MarginContainer")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,13 +13,11 @@ offset_right = -720.0
 offset_bottom = -1280.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_rpqi1")
+MarginContainer = NodePath("AspectRatioContainer/VSplitContainer/MarginContainer")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1386769556]
 anchor_mode = 0
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1012324316]
-position = Vector2(303, 457)
-texture = ExtResource("1_3mqji")
 
 [node name="AspectRatioContainer" type="Control" parent="." unique_id=1983448826]
 layout_mode = 1
@@ -33,17 +31,30 @@ offset_bottom = 1280.0
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="AspectRatioContainer" unique_id=1494125892]
+[node name="VSplitContainer" type="VSplitContainer" parent="AspectRatioContainer" unique_id=1324601222]
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -100.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
+dragging_enabled = false
+dragger_visibility = 2
+drag_area_highlight_in_editor = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="AspectRatioContainer/Panel" unique_id=1695985571]
+[node name="MarginContainer" type="MarginContainer" parent="AspectRatioContainer/VSplitContainer" unique_id=1603729380]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GameMenu" parent="AspectRatioContainer/VSplitContainer/MarginContainer" unique_id=1939085568 instance=ExtResource("2_uxrcv")]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="AspectRatioContainer/VSplitContainer" unique_id=1494125892]
+custom_maximum_size = Vector2(-1, 100)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AspectRatioContainer/VSplitContainer/Panel" unique_id=1695985571]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -51,16 +62,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="AspectRatioContainer/Panel/HBoxContainer" unique_id=119556109]
+[node name="Button" type="Button" parent="AspectRatioContainer/VSplitContainer/Panel/HBoxContainer" unique_id=119556109]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 
-[node name="UpgradeButton" parent="AspectRatioContainer/Panel/HBoxContainer" unique_id=1651956108 instance=ExtResource("2_x4av3")]
-layout_mode = 2
-
 [node name="CheatMenu" parent="." unique_id=101566279 node_paths=PackedStringArray("cheatButtons") instance=ExtResource("3_rpqi1")]
+visible = false
 layout_mode = 1
 offset_right = 200.0
 offset_bottom = 307.0
@@ -71,3 +80,5 @@ cheatButtons = {
 "InfinitePlanks": NodePath("ScrollContainer/VBoxContainer/Button3"),
 "InfiniteWood": NodePath("ScrollContainer/VBoxContainer/Button2")
 }
+
+[connection signal="pressed" from="AspectRatioContainer/VSplitContainer/Panel/HBoxContainer/Button" to="." method="OnGameMenuButtonPressed"]
